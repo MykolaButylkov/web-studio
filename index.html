@@ -9,25 +9,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/style.css">
-  <style>
-    </style>
+  <link type="image/x-icon" href="../images/logo-minimal-web.jpg" rel="shortcut icon">
+
 </head>
 <body>
   <!-- NAV -->
   <header class="nav">
-    <div class="container nav-inner">
-      <a class="logo" href="#">
-        <span class="logo-mark">∷</span>
-        <span>minimal<span style="opacity:.5">/web</span></span>
-      </a>
-      <nav style="display:flex; gap:16px; align-items:center">
-        <a class="ghost" href="#portfolio">Портфолио</a>
-        <a class="ghost" href="#pricing">Цены</a>`
-        <a class="ghost" href="#contact">Контакты</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">◑</button>
-      </nav>
-    </div>
-  </header>
+<div class="container nav-inner">
+<a class="logo" href="#">
+<!-- <span class="logo-mark">∷</span> -->
+<span class="logo-mark"><img class="logo-mark__logo" src="../images/logo-minimal-web.jpg" alt=""></span>
+<span>minimal<span style="opacity:.5">/web</span></span>
+</a>
+<nav>
+<button class="burger" id="burger" aria-label="Меню">
+<span></span><span></span><span></span>
+</button>
+<div class="menu" id="menu">
+<a class="ghost" href="#portfolio">Портфолио</a>
+<a class="ghost" href="#pricing">Цены</a>
+<a class="ghost" href="#contact">Контакты</a>
+<button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">◑</button>
+</div>
+</nav>
+</div>
+</header>
 
   <!-- HERO -->
   <section class="hero">
@@ -81,9 +87,21 @@
       <h2>Работы</h2>
       <p class="section-lead">Снимки макетов и живых проектов. Подчеркнутые отступы, аккуратные сетки.</p>
       <div class="portfolio">
-        <div class="shot">Скриншот проекта #1</div>
-        <div class="shot">Скриншот проекта #2</div>
-        <div class="shot">Скриншот проекта #3</div>
+        <div class="shot">
+            <a href="https://veselepereezdy.com/ru/?lang=ru">
+            <img class="shot__img" src="../images/moving-web.jpg" alt="moving-web">
+            </a>
+        </div>
+        <div class="shot">
+            <a href="https://mykolabutylkov.github.io/phone-cataloge_react-redux/">
+            <img class="shot__img" src="../images/phone-cataloge.jpg" alt="moving-web">
+            </a>
+        </div>
+        <div class="shot">
+            <a href="https://mykolabutylkov.github.io/lorem_landing-page/">
+            <img class="shot__img" src="../images/lorem-cards.jpg" alt="moving-web">
+            </a>
+        </div>
       </div>
     </div>
   </section>
@@ -169,22 +187,14 @@
       </div>
     </div>
   </footer>
-
+  <script src="../script/script.js"></script>
+  <script src="../script/burger-menu.js"></script>
+  <script src="../script/theme.js"></script>
   <script>
     // Год в футере
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Переключение темы (light/dark)
-    const toggle = document.getElementById('themeToggle');
-    const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
-    toggle.addEventListener('click', () => {
-      const cur = document.documentElement.getAttribute('data-theme');
-      const next = cur === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    });
+    
 
     // Имитация отправки формы (замени на интеграцию)
     function sendForm(e){
