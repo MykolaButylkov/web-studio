@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link type="image/x-icon" href="images/logo-minimal-web.jpg" rel="shortcut icon">
-<link rel="stylesheet" href="css/portfolio-carousel.css">
+    <link rel="stylesheet" href="css/portfolio-carousel.css">
 
 </head>
 
@@ -50,7 +50,7 @@
                 <div class="cta">
                     <a class="btn" href="#contact">Оставить заявку</a>
                     <a class="btn secondary" href="#portfolio">Смотреть работы</a>
-                    <a class="ghost-inline" href="https://wa.me/972000000000" target="_blank"
+                    <a class="ghost-inline" href="https://wa.me/380683851404" target="_blank"
                         rel="noopener">WhatsApp</a>
                 </div>
                 <div class="hero-card">
@@ -86,31 +86,6 @@
             </div>
         </div>
     </section>
-
-    <!-- PORTFOLIO
-  <section class="section" id="portfolio">
-    <div class="container">
-      <h2>Работы</h2>
-      <p class="section-lead">Снимки макетов и живых проектов. Подчеркнутые отступы, аккуратные сетки.</p>
-      <div class="portfolio">
-        <div class="shot">
-            <a href="https://veselepereezdy.com/ru/?lang=ru">
-            <img class="shot__img" src="images/moving-web.jpg" alt="moving-web">
-            </a>
-        </div>
-        <div class="shot">
-            <a href="https://mykolabutylkov.github.io/phone-cataloge_react-redux/">
-            <img class="shot__img" src="images/phone-cataloge.jpg" alt="phone-cataloge">
-            </a>
-        </div>
-        <div class="shot">
-            <a href="https://mykolabutylkov.github.io/lorem_landing-page/">
-            <img class="shot__img" src="images/lorem-cards.jpg" alt="lorem-cards">
-            </a>
-        </div>
-      </div>
-    </div>
-  </section> -->
     <!-- PORTFOLIO (CAROUSEL) -->
     <section class="section" id="portfolio">
         <div class="container">
@@ -141,14 +116,14 @@
                             </a>
                         </article>
                         <article class="slide">
-                            <a class="shot" href="https://mykolabutylkov.github.io/nothing_landing-page/" target="_blank"
-                                rel="noopener">
+                            <a class="shot" href="https://mykolabutylkov.github.io/nothing_landing-page/"
+                                target="_blank" rel="noopener">
                                 <img class="shot__img" src="images/nothing-lp.jpg" alt="nothing-lp" />
                             </a>
                         </article>
                         <article class="slide">
-                            <a class="shot" href="https://mykolabutylkov.github.io/kickstarter_landing-page/" target="_blank"
-                                rel="noopener">
+                            <a class="shot" href="https://mykolabutylkov.github.io/kickstarter_landing-page/"
+                                target="_blank" rel="noopener">
                                 <img class="shot__img" src="images/crazy-baby.jpg" alt="crazy-baby" />
                             </a>
                         </article>
@@ -158,8 +133,8 @@
                                 <img class="shot__img" src="images/wetlook.jpg" alt="wetlook" />
                             </a>
                         </article>
-                        
-                        
+
+
                     </div>
                 </div>
                 <button class="carousel__arrow next" aria-label="Вперёд" type="button">›</button>
@@ -232,22 +207,31 @@
         <div class="container">
             <h2>Начнём проект</h2>
             <p class="section-lead">Опишите задачу — вернусь с предложением по срокам и стоимости.</p>
-            <form onsubmit="sendForm(event)">
+            <form id="leadForm">
                 <div class="row">
                     <div class="col" style="grid-column: span 6;">
                         <input required name="name" placeholder="Ваше имя" />
                     </div>
                     <div class="col" style="grid-column: span 6;">
-                        <input required name="contact" placeholder="Email или WhatsApp" />
+                        <input required name="contact" placeholder="Tелефон или WhatsApp" />
                     </div>
                 </div>
                 <textarea name="about" placeholder="Коротко о проекте: цель, страницы, примеры" required></textarea>
+
+                <!-- honeypot -->
+                <input type="text" name="company" autocomplete="off" tabindex="-1" aria-hidden="true"
+                    style="position:absolute;left:-9999px;opacity:0;height:0;width:0;">
+
                 <div style="display:flex; gap:10px; flex-wrap:wrap">
                     <button class="btn" type="submit">Отправить</button>
-                    <a class="btn secondary" href="https://wa.me/972000000000" target="_blank" rel="noopener">Написать в
+                    <a class="btn secondary" href="https://wa.me/380683851404" target="_blank" rel="noopener">Написать в
                         WhatsApp</a>
                 </div>
             </form>
+
+            <!-- подключение скрипта -->
+            <script src="js/lead-form.js" defer></script>
+
         </div>
     </section>
 
