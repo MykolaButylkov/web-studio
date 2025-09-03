@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Веб‑студия — минимализм, скорость, результат</title>
+  <meta name="description" content="Минималистичный сайт веб‑студии: лендинги, сайты для бизнеса, интернет‑магазины. Чистый дизайн, быстрая загрузка, понятные цены." />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#">
+        <span class="logo-mark">∷</span>
+        <span>minimal<span style="opacity:.5">/web</span></span>
+      </a>
+      <nav style="display:flex; gap:16px; align-items:center">
+        <a class="ghost" href="#portfolio">Портфолио</a>
+        <a class="ghost" href="#pricing">Цены</a>
+        <a class="ghost" href="#contact">Контакты</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">◑</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="stack">
+        <span class="eyebrow">веб‑разработка без шума</span>
+        <h1>Делаем сайты, которые<br/>выглядят просто и работают быстро</h1>
+        <p class="lead">Лендинги, сайты для бизнеса и магазины. Чистый минимализм, акцент на конверсию, загрузка до 1 секунды на 4G.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Оставить заявку</a>
+          <a class="btn secondary" href="#portfolio">Смотреть работы</a>
+          <a class="ghost-inline" href="https://wa.me/972000000000" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <div class="hero-card">
+          <div class="kpis">
+            <div class="kpi"><b>10–14 дней</b><br><span class="muted">запуск типового лендинга</span></div>
+            <div class="kpi"><b>90+</b><br><span class="muted">Google PageSpeed (моб.)</span></div>
+            <div class="kpi"><b>SEO‑готово</b><br><span class="muted">с первых релизов</span></div>
+            <div class="kpi"><b>Под ключ</b><br><span class="muted">дизайн → код → запуск</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2>Что делаем</h2>
+      <p class="section-lead">Ровные сетки, простор, ясная типографика. Никакой визуальной суеты.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Лендинги</h3>
+          <p>Минимум отвлечений, максимум смысла. Фокус на оффер и конверсию.</p>
+        </article>
+        <article class="card">
+          <h3>Сайты для бизнеса</h3>
+          <p>Страницы услуг, кейсы, блог, контакты. Легкая структура и SEO‑основа.</p>
+        </article>
+        <article class="card">
+          <h3>Магазины</h3>
+          <p>Каталог, фильтры, корзина, оплатa. Быстрый UX и понятная навигация.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <h2>Работы</h2>
+      <p class="section-lead">Снимки макетов и живых проектов. Подчеркнутые отступы, аккуратные сетки.</p>
+      <div class="portfolio">
+        <div class="shot">Скриншот проекта #1</div>
+        <div class="shot">Скриншот проекта #2</div>
+        <div class="shot">Скриншот проекта #3</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section" id="process">
+    <div class="container">
+      <h2>Процесс</h2>
+      <div class="timeline">
+        <div class="step"><div class="dot"></div><div><b>1. Бриф.</b> Цели, структура, контент. 30–45 минут.</div></div>
+        <div class="step"><div class="dot"></div><div><b>2. Дизайн.</b> Первый макет в Figma + правки.</div></div>
+        <div class="step"><div class="dot"></div><div><b>3. Разработка.</b> Чистый HTML/CSS/JS. Оптимизация скорости.</div></div>
+        <div class="step"><div class="dot"></div><div><b>4. Запуск.</b> Хостинг, домен, аналитика, SEO‑база.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2>Цены</h2>
+      <p class="section-lead">Прозрачно и без скрытых платежей. Фиксированный объём и сроки.</p>
+      <div class="price-grid">
+        <div class="price">
+          <div class="title"><b>Лендинг</b><span class="num">₪ 2 500+</span></div>
+          <ul>
+            <li>1–3 экрана, форма заявки</li>
+            <li>Адаптив, базовое SEO</li>
+            <li>Срок: 7–10 дней</li>
+          </ul>
+        </div>
+        <div class="price">
+          <div class="title"><b>Сайт для бизнеса</b><span class="num">₪ 4 500+</span></div>
+          <ul>
+            <li>Главная + 3–5 внутренних</li>
+            <li>Блог/кейсы, аналитика</li>
+            <li>Срок: 10–14 дней</li>
+          </ul>
+        </div>
+        <div class="price">
+          <div class="title"><b>Интернет‑магазин</b><span class="num">₪ 7 900+</span></div>
+          <ul>
+            <li>Каталог, фильтры, корзина</li>
+            <li>Оплаты/доставка, SEO‑структура</li>
+            <li>Срок: 14–21 день</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2>Начнём проект</h2>
+      <p class="section-lead">Опишите задачу — вернусь с предложением по срокам и стоимости.</p>
+      <form onsubmit="sendForm(event)">
+        <div class="row">
+          <div class="col" style="grid-column: span 6;">
+            <input required name="name" placeholder="Ваше имя" />
+          </div>
+          <div class="col" style="grid-column: span 6;">
+            <input required name="contact" placeholder="Email или WhatsApp" />
+          </div>
+        </div>
+        <textarea name="about" placeholder="Коротко о проекте: цель, страницы, примеры" required></textarea>
+        <div style="display:flex; gap:10px; flex-wrap:wrap">
+          <button class="btn" type="submit">Отправить</button>
+          <a class="btn secondary" href="https://wa.me/972000000000" target="_blank" rel="noopener">Написать в WhatsApp</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
+      <div>© <span id="year"></span> minimal/web — веб‑студия</div>
+      <div style="display:flex; gap:14px">
+        <a class="ghost-inline" href="#services">Услуги</a>
+        <a class="ghost-inline" href="#portfolio">Работы</a>
+        <a class="ghost-inline" href="#pricing">Цены</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Год в футере
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Переключение темы (light/dark)
+    const toggle = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    toggle.addEventListener('click', () => {
+      const cur = document.documentElement.getAttribute('data-theme');
+      const next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+
+    // Имитация отправки формы (замени на интеграцию)
+    function sendForm(e){
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      console.log('Lead:', data);
+      alert('Спасибо! Я свяжусь с вами в ближайшее время.');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
