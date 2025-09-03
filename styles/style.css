@@ -15,11 +15,20 @@
     --container: 1100px;
 }
 
+/* Dark theme when attribute is set */
 html[data-theme="dark"] {
-    
+    --bg: #0b1220;
+    --fg: #e5e7eb;
+    --muted: #9ca3af;
+    --border: #1f2937;
+    --accent: #f3f4f6;
+    --card: #0f172a;
+    --shadow: 0 10px 30px rgba(0, 0, 0, .35);
 }
+
+/* Fallback: auto-dark if user prefers dark and no explicit theme set */
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme="light"]) {
         --bg: #0b1220;
         --fg: #e5e7eb;
         --muted: #9ca3af;

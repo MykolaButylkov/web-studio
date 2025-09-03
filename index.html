@@ -8,10 +8,9 @@
   <meta name="color-scheme" content="light dark" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/styles/style.css">
   <style>
-    
-  </style>
+    </style>
 </head>
 <body>
   <!-- NAV -->
@@ -23,7 +22,7 @@
       </a>
       <nav style="display:flex; gap:16px; align-items:center">
         <a class="ghost" href="#portfolio">Портфолио</a>
-        <a class="ghost" href="#pricing">Цены</a>
+        <a class="ghost" href="#pricing">Цены</a>`
         <a class="ghost" href="#contact">Контакты</a>
         <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">◑</button>
       </nav>
@@ -178,7 +177,8 @@
     // Переключение темы (light/dark)
     const toggle = document.getElementById('themeToggle');
     const saved = localStorage.getItem('theme');
-    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
     toggle.addEventListener('click', () => {
       const cur = document.documentElement.getAttribute('data-theme');
       const next = cur === 'dark' ? 'light' : 'dark';
