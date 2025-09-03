@@ -93,7 +93,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 14px 0
+    padding: 14px 10px;
 }
 
 .logo {
@@ -115,7 +115,7 @@ body {
     font-size: 14px
 }
 
-.logo-mark__logo{
+.logo-mark__logo {
     width: 100%;
     border-radius: 5px;
 }
@@ -130,16 +130,64 @@ body {
     opacity: 1
 }
 
-.nav-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-.menu{display:flex; gap:16px; align-items:center}
-.menu a{color:var(--fg); text-decoration:none;}
-.theme-toggle{border:1px solid var(--border); background:transparent; color:var(--fg); padding:10px 12px; border-radius:999px; cursor:pointer}
-.burger{display:none; flex-direction:column; gap:4px; cursor:pointer; background:none; border:none; padding:0}
-.burger span{width:24px; height:2px; background:var(--fg); border-radius:2px}
-@media(max-width:768px){
-.menu{display:none; flex-direction:column; background:var(--bg); position:absolute; top:60px; right:20px; padding:20px; border:1px solid var(--border); border-radius:12px; box-shadow:var(--shadow)}
-.menu.open{display:flex}
-.burger{display:flex}
+.menu {
+    display: flex;
+    gap: 16px;
+    align-items: center
+}
+
+.menu a {
+    color: var(--fg);
+    text-decoration: none;
+}
+
+.theme-toggle {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--fg);
+    padding: 10px 12px;
+    border-radius: 999px;
+    cursor: pointer
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0
+}
+
+.burger span {
+    width: 24px;
+    height: 2px;
+    background: var(--fg);
+    border-radius: 2px
+}
+
+@media(max-width:768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: var(--bg);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 20px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        box-shadow: var(--shadow)
+    }
+
+    .menu.open {
+        display: flex
+    }
+
+    .burger {
+        display: flex
+    }
 }
 
 .ghost {
@@ -307,16 +355,18 @@ h1 {
     place-items: center;
     color: var(--muted);
     font-size: 14px;
-  overflow: hidden; /* обрезаем лишнее */
+    overflow: hidden;
+    /* обрезаем лишнее */
 
 }
 
 .shot__img {
- 
-  width: 145%;
-  height: 100%;
-  object-fit: cover; /* картинка растягивается и заполняет блок */
-  display: block;
+
+    width: 145%;
+    height: 100%;
+    object-fit: cover;
+    /* картинка растягивается и заполняет блок */
+    display: block;
 
 
 }
