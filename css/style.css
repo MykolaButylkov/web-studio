@@ -150,21 +150,23 @@ body {
     cursor: pointer
 }
 
+/* Бургер как был */
 .burger {
-    display: none;
-    flex-direction: column;
-    gap: 4px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 1001; /* выше меню */
+  position: relative;
 }
-
 .burger span {
-    width: 24px;
-    height: 2px;
-    background: var(--fg);
-    border-radius: 2px
+  width: 28px;
+  height: 3px;
+  background: var(--fg);
+  border-radius: 2px;
 }
 
 @media(max-width:768px) {
