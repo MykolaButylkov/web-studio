@@ -147,22 +147,96 @@
                 </div>
 
                 <div id="portfolioCarousel" class="carousel" aria-label="Портфолио — карусель" data-reveal>
-                    <button class="carousel__arrow prev" aria-label="Назад" type="button">‹</button>
-                    <div class="carousel__viewport">
-                        <div class="carousel__track">
-                            <article class="slide"><a class="shot" href="https://csisraellan.co.il/" target="_blank" rel="noopener"><img class="shot__img" src="images/csisraellan.png" alt="Counter-Strike 2 tournament website" /></a></article>
-                            <article class="slide"><a class="shot" href="https://alexohovalot.co.il/" target="_blank" rel="noopener"><img class="shot__img" src="images/ura-hovalot.png" alt="Moving company website" /></a></article>
-                            <article class="slide"><a class="shot" href="https://mykolabutylkov.github.io/kickstarter_landing-page/" target="_blank" rel="noopener"><img class="shot__img" src="images/crazy-baby.jpg" alt="Kickstarter landing page" /></a></article>
-                            <article class="slide"><a class="shot" href="https://veselepereezdy.com/ru/?lang=ru" target="_blank" rel="noopener"><img class="shot__img" src="images/moving-web.jpg" alt="Moving web project" /></a></article>
-                            <article class="slide"><a class="shot" href="https://mykolabutylkov.github.io/phone-cataloge_react-redux/" target="_blank" rel="noopener"><img class="shot__img" src="images/phone-cataloge.jpg" alt="Phone catalogue" /></a></article>
-                            <article class="slide"><a class="shot" href="https://mykolabutylkov.github.io/lorem_landing-page/" target="_blank" rel="noopener"><img class="shot__img" src="images/lorem-cards.jpg" alt="Lorem landing page" /></a></article>
-                            <article class="slide"><a class="shot" href="https://mykolabutylkov.github.io/nothing_landing-page/" target="_blank" rel="noopener"><img class="shot__img" src="images/nothing-lp.jpg" alt="Nothing landing page" /></a></article>
-                            <article class="slide"><a class="shot" href="https://mykolabutylkov.github.io/wetlook.github.io/" target="_blank" rel="noopener"><img class="shot__img" src="images/wetlook.jpg" alt="Wetlook landing page" /></a></article>
-                        </div>
-                    </div>
-                    <button class="carousel__arrow next" aria-label="Вперёд" type="button">›</button>
-                    <div class="carousel__dots" aria-hidden="false"></div>
-                </div>
+  <button class="carousel__arrow prev" aria-label="Назад" type="button">‹</button>
+
+  <div class="carousel__viewport">
+    <div class="carousel__track">
+
+      <article class="slide">
+        <button class="shot js-open-project" type="button" data-url="https://csisraellan.co.il/" data-title="CSIL Tournament">
+          <img class="shot__img" src="images/csisraellan.png" alt="Counter-Strike 2 tournament website" />
+        </button>
+      </article>
+
+      <article class="slide">
+        <button class="shot js-open-project" type="button" data-url="https://alexohovalot.co.il/" data-title="Alex Hovalot">
+          <img class="shot__img" src="images/ura-hovalot.png" alt="Moving company website" />
+        </button>
+      </article>
+
+      <article class="slide">
+        <button class="shot js-open-project" type="button" data-url="https://mykolabutylkov.github.io/kickstarter_landing-page/" data-title="Kickstarter Landing Page">
+          <img class="shot__img" src="images/crazy-baby.jpg" alt="Kickstarter landing page" />
+        </button>
+      </article>
+
+      <article class="slide">
+        <button class="shot js-open-project" type="button" data-url="https://veselepereezdy.com/ru/?lang=ru" data-title="Vesele Pereezdy">
+          <img class="shot__img" src="images/moving-web.jpg" alt="Moving web project" />
+        </button>
+      </article>
+
+      <article class="slide">
+        <button class="shot js-open-project" type="button" data-url="https://mykolabutylkov.github.io/phone-cataloge_react-redux/" data-title="Phone Catalogue">
+          <img class="shot__img" src="images/phone-cataloge.jpg" alt="Phone catalogue" />
+        </button>
+      </article>
+
+      <article class="slide">
+        <button class="shot js-open-project" type="button" data-url="https://mykolabutylkov.github.io/lorem_landing-page/" data-title="Lorem Landing Page">
+          <img class="shot__img" src="images/lorem-cards.jpg" alt="Lorem landing page" />
+        </button>
+      </article>
+
+      <article class="slide">
+        <button class="shot js-open-project" type="button" data-url="https://mykolabutylkov.github.io/nothing_landing-page/" data-title="Nothing Landing Page">
+          <img class="shot__img" src="images/nothing-lp.jpg" alt="Nothing landing page" />
+        </button>
+      </article>
+
+      <article class="slide">
+        <button class="shot js-open-project" type="button" data-url="https://mykolabutylkov.github.io/wetlook.github.io/" data-title="Wetlook Landing Page">
+          <img class="shot__img" src="images/wetlook.jpg" alt="Wetlook landing page" />
+        </button>
+      </article>
+
+    </div>
+  </div>
+
+  <button class="carousel__arrow next" aria-label="Вперёд" type="button">›</button>
+</div>
+<div class="project-modal" id="projectModal" aria-hidden="true">
+  <div class="project-modal__overlay" data-close-project></div>
+
+  <div class="project-modal__content">
+    <div class="project-modal__top">
+      <div>
+        <span class="project-modal__label">Live preview</span>
+        <h3 class="project-modal__title" id="projectModalTitle">Project</h3>
+      </div>
+
+      <button class="project-modal__close" type="button" data-close-project>
+        Закрыть
+      </button>
+    </div>
+
+    <div class="project-modal__frame-wrap">
+      <iframe
+        id="projectModalFrame"
+        class="project-modal__frame"
+        src=""
+        title="Project preview"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <div class="project-modal__bottom">
+      <a id="projectModalLink" class="project-modal__link" href="#" target="_blank" rel="noopener noreferrer">
+        Открыть сайт
+      </a>
+    </div>
+  </div>
+</div>
             </div>
         </section>
 
@@ -248,6 +322,7 @@
     <script src="script/theme.js"></script>
     <script src="script/portfolio-carousel.js" defer></script>
     <script src="script/lead-form.js" defer></script>
+    <script src="script/project-modal.js"></script>
     <script>
         function gtag_report_conversion() {
             gtag('event', 'conversion', { 'send_to': 'AW-17102315198/6m8pCMGoq_caEL69gts_' });
